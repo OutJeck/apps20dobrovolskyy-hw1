@@ -28,7 +28,9 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double average() {
-        if (temperatureArray.length == 0) throw new IllegalArgumentException();
+        if (temperatureArray.length == 0) {
+            throw new IllegalArgumentException();
+        }
 
         double sum = 0;
 
@@ -41,12 +43,14 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double deviation() {
-        if (temperatureArray.length == 0) throw new IllegalArgumentException();
+        if (temperatureArray.length == 0) {
+            throw new IllegalArgumentException();
+        }
 
         double sum = 0;
 
         for (double  t: temperatureArray) {
-            sum += Math.pow(t - average(), 2);
+            sum += Math.abs(t - average()) * Math.abs(t - average());
         }
 
         return Math.sqrt(sum / temperatureArray.length);
@@ -63,12 +67,16 @@ public class TemperatureSeriesAnalysis {
 
     // truth = min
     private double minOrMax(boolean truth) {
-        if (temperatureArray.length == 0) throw new IllegalArgumentException();
+        if (temperatureArray.length == 0) {
+            throw new IllegalArgumentException();
+        }
 
         double[] extraArr = temperatureArray.clone();
         Arrays.sort(extraArr);
 
-        if (truth) return extraArr[0];
+        if (truth) {
+            return extraArr[0];
+        }
         return extraArr[extraArr.length - 1];
     }
 
@@ -78,7 +86,9 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double findTempClosestToValue(double tempValue) {
-        if (temperatureArray.length == 0) throw new IllegalArgumentException();
+        if (temperatureArray.length == 0) {
+            throw new IllegalArgumentException();
+        }
 
         double closestTemp = temperatureArray[0];
         double closestDistance = Math.abs(tempValue - temperatureArray[0]);
@@ -89,9 +99,11 @@ public class TemperatureSeriesAnalysis {
                 closestTemp = temperatureArray[i];
                 closestDistance = Math.abs(tempValue - temperatureArray[i]);
 
-            } else if (Math.abs(tempValue - temperatureArray[i]) == closestDistance) {
+            } else if (Math.abs(tempValue - temperatureArray[i])
+                    ==
+                    closestDistance) {
 
-                if ( temperatureArray[i] > closestTemp) {
+                if (temperatureArray[i] > closestTemp) {
                     closestTemp = temperatureArray[i];
                     closestDistance = Math.abs(tempValue - temperatureArray[i]);
                 }
@@ -112,7 +124,9 @@ public class TemperatureSeriesAnalysis {
 
     // truth = less
     private double[] findTempsLessOrGreater(boolean truth, double tempValue) {
-        if (temperatureArray.length == 0) throw new IllegalArgumentException();
+        if (temperatureArray.length == 0) {
+            throw new IllegalArgumentException();
+        }
 
         double[] extraArr = temperatureArray.clone();
         Arrays.sort(extraArr);
@@ -125,13 +139,16 @@ public class TemperatureSeriesAnalysis {
             }
         }
 
-
-        if (truth) return Arrays.copyOfRange(extraArr, 0, counter);
+        if (truth) {
+            return Arrays.copyOfRange(extraArr, 0, counter);
+        }
         return Arrays.copyOfRange(extraArr, counter, temperatureArray.length);
     }
 
     public TempSummaryStatistics summaryStatistics() {
-        if (temperatureArray.length == 0) throw new IllegalArgumentException();
+        if (temperatureArray.length == 0) {
+            throw new IllegalArgumentException();
+        }
         return new TempSummaryStatistics(this);
     }
 
@@ -148,7 +165,11 @@ public class TemperatureSeriesAnalysis {
         for (double t: temps) {
             if (capacity == temperatureArray.length) {
                 double[] newTempArr = new double[temperatureArray.length * 2];
-                System.arraycopy(temperatureArray, 0, newTempArr, 0, temperatureArray.length);
+                System.arraycopy(temperatureArray,
+                        0,
+                        newTempArr,
+                        0,
+                        temperatureArray.length);
 
                 temperatureArray = newTempArr;
             }
@@ -161,7 +182,9 @@ public class TemperatureSeriesAnalysis {
 
     private boolean checkMinTemperature(double[] temps) {
         for (double t: temps) {
-            if (t  < minTemperature) return true;
+            if (t  < minTemperature) {
+                return true;
+            }
         }
         return false;
     }

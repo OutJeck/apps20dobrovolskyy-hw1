@@ -279,6 +279,19 @@ public class TemperatureSeriesAnalysisTest {
     }
 
     @Test
+    public void testFindClosestToValueWithTwoEqualDistances() {
+        double[] temperatureSeries = {3.0, -5.0, 0.0, 2.0, 10.0};
+        TemperatureSeriesAnalysis seriesAnalysis = new TemperatureSeriesAnalysis(temperatureSeries);
+        double expResult = 2.0;
+
+        double actualResult = seriesAnalysis.findTempClosestToValue(1);
+
+        assertEquals(expResult, actualResult, 0.00001);
+    }
+
+
+
+    @Test
     public void testFindTempsLessThenWithOneElementArray() {
         double[] temperatureSeries = {5.0};
         TemperatureSeriesAnalysis seriesAnalysis = new TemperatureSeriesAnalysis(temperatureSeries);
@@ -336,6 +349,17 @@ public class TemperatureSeriesAnalysisTest {
         double[] temperatureSeries = {3.0, -5.0, 1.0, 5.0};
         TemperatureSeriesAnalysis seriesAnalysis = new TemperatureSeriesAnalysis(temperatureSeries);
         double[] expResult = {3.0, 5.0};
+
+        double[] actualResult = seriesAnalysis.findTempsGreaterThen(3);
+
+        assertArrayEquals(expResult, actualResult, 0.00001);
+    }
+
+    @Test
+    public void testFindTempsGreaterThenSecondTest() {
+        double[] temperatureSeries = {3.0, -5.0, 1.0, 5.0, 6.0, 8.0, -10.0};
+        TemperatureSeriesAnalysis seriesAnalysis = new TemperatureSeriesAnalysis(temperatureSeries);
+        double[] expResult = {3.0, 5.0, 6.0, 8.0};
 
         double[] actualResult = seriesAnalysis.findTempsGreaterThen(3);
 
