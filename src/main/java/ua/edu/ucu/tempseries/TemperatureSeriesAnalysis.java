@@ -125,7 +125,6 @@ public class TemperatureSeriesAnalysis {
             }
         }
 
-        System.out.println(counter);
 
         if (truth) return Arrays.copyOfRange(extraArr, 0, counter);
         return Arrays.copyOfRange(extraArr, counter, temperatureArray.length);
@@ -133,7 +132,7 @@ public class TemperatureSeriesAnalysis {
 
     public TempSummaryStatistics summaryStatistics() {
         if (temperatureArray.length == 0) throw new IllegalArgumentException();
-        return new TempSummaryStatistics(average(), deviation(), min(), max());
+        return new TempSummaryStatistics(this);
     }
 
     public int addTemps(double... temps) {
