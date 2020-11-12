@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 
 public class TemperatureSeriesAnalysis {
-    private double[] temperatureArray;
     private static final double MIN_TEMPERATURE = -273;
-
+    
+    private double[] temperatureArray;
     private int capacity;
 
 
