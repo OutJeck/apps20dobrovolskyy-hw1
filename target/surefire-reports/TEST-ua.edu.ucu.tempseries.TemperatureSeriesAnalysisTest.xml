@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="43" failures="0" name="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" time="0.017" errors="0" skipped="0">
+<testsuite tests="43" failures="0" name="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2020.2.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -65,12 +65,12 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testAverageWithOneElementArray" time="0.007"/>
+  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testAverageWithOneElementArray" time="0.005"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToValueWithEmptyArray" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testAddTempsWithEmptyArray" time="0"/>
-  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsLessThenWithOneElementArray" time="0.005"/>
+  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsLessThenWithOneElementArray" time="0.001"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testAddTempsWithOneElementArray" time="0"/>
-  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testSummaryStatisticsWithOneElementArray" time="0"/>
+  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testSummaryStatisticsWithOneElementArray" time="0.001"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsLessThen" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToZero" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testMax" time="0"/>
@@ -84,7 +84,7 @@
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testAverageWithEmptyArrayByCallingWithoutArg" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToValueMinOutside" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testSummaryStatistics" time="0"/>
-  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testAddTemps" time="0"/>
+  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testAddTemps" time="0.001"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToValueWithOneElementArray" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToValueMinOutsideWithEmptyArray" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToZeroWithOneElementArray" time="0"/>
@@ -96,7 +96,7 @@
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testMaxWithOneElementArray" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testSummaryStatisticsWithEmptyArray" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testDeviationWithEmptyArray" time="0"/>
-  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToValue" time="0"/>
+  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToValue" time="0.001"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testAddTempsMinOutside" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testDeviation" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToValueWithToEqualDistances" time="0"/>
@@ -104,8 +104,8 @@
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testMaxWithEmptyArray" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsGreaterThen" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testTemperatureOutside" time="0"/>
-  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsGreaterThenSecondTest" time="0.004"/>
+  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsGreaterThenSecondTest" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testDeviationWithOneElementArray" time="0"/>
   <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testFindClosestToValueMinOutsideWithOneElementArray" time="0"/>
-  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testMinWithOneElementArray" time="0"/>
-</testsuite>tsuite>
+  <testcase classname="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" name="testMinWithOneElementArray" time="0.001"/>
+</testsuite>
